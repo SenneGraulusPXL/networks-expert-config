@@ -1,0 +1,20 @@
+<config>
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <hostname operation="delete"/>
+    <interface>
+      <Loopback operation="delete">
+        <name>20</name>
+      </Loopback>
+      <GigabitEthernet operation="delete">
+        <name>3</name>
+      </GigabitEthernet>
+    </interface>
+    <router>
+      <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf" operation="delete">
+        <process-id>
+          <id>2</id>
+        </process-id>
+      </ospf>
+    </router>
+  </native>
+</config>
