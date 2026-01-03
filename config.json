@@ -1,0 +1,36 @@
+{
+  "hostname": "Gemini-Router-RESTCONF",
+  "interfaces": {
+    "loopbacks": [
+      {
+        "name": "30",
+        "description": "Configured by Gemini RESTCONF",
+        "ip": "10.0.0.3",
+        "netmask": "255.255.255.255"
+      }
+    ],
+    "gigabit_ethernets": [
+      {
+        "name": "4",
+        "description": "Configured by Gemini RESTCONF",
+        "ip": "192.168.56.104",
+        "netmask": "255.255.255.0"
+      }
+    ]
+  },
+  "ospf": {
+    "process_id": 3,
+    "networks": [
+      {
+        "ip": "10.0.0.3",
+        "wildcard": "0.0.0.0",
+        "area": 0
+      },
+      {
+        "ip": "192.168.56.0",
+        "wildcard": "0.0.0.255",
+        "area": 0
+      }
+    ]
+  }
+}
