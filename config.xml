@@ -1,0 +1,48 @@
+<config>
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <hostname>Gemini-Router-NETCONF</hostname>
+    <interface>
+      <Loopback>
+        <name>20</name>
+        <description>Configured by Gemini NETCONF</description>
+        <ip>
+          <address>
+            <primary>
+              <address>10.0.0.2</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+      <GigabitEthernet>
+        <name>3</name>
+        <description>Configured by Gemini NETCONF</description>
+        <ip>
+          <address>
+            <primary>
+              <address>192.168.56.103</address>
+              <mask>255.255.255.0</mask>
+            </primary>
+          </address>
+        </ip>
+      </GigabitEthernet>
+    </interface>
+    <router>
+      <ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
+        <process-id>
+          <id>2</id>
+          <network>
+            <ip>10.0.0.2</ip>
+            <wildcard>0.0.0.0</wildcard>
+            <area>0</area>
+          </network>
+          <network>
+            <ip>192.168.56.0</ip>
+            <wildcard>0.0.0.255</wildcard>
+            <area>0</area>
+          </network>
+        </process-id>
+      </ospf>
+    </router>
+  </native>
+</config>
