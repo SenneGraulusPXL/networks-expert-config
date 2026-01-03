@@ -11,7 +11,7 @@
     ],
     "gigabit_ethernets": [
       {
-        "name": "1",
+        "name": "GigabitEthernet1",
         "description": "RESTCONF",
         "ip": "192.168.84.128",
         "netmask": "255.255.255.0"
