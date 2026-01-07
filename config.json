@@ -1,5 +1,5 @@
 {
-  "hostname": "Router-RESTCONF",
+  "hostname": "LAB-RA08-C02-R01-RESTCONFIG",
   "interfaces": {
     "loopbacks": [
       {
@@ -13,24 +13,29 @@
       {
         "name": "GigabitEthernet1",
         "description": "RESTCONF",
-        "ip": "192.168.84.128",
-        "netmask": "255.255.255.0"
+        "ip": "10.199.66.116",
+        "netmask": "255.255.255.224"
       }
     ]
   },
   "ospf": {
-    "process_id": 3,
+    "process_id": 10,
     "networks": [
       {
-        "ip": "10.0.0.3",
-        "wildcard": "0.0.0.0",
+        "ip": "10.199.66.96",
+        "wildcard": "0.0.0.31",
         "area": 0
       },
       {
-        "ip": "192.168.84.128",
-        "wildcard": "0.0.0.255",
+        "ip": "172.16.8.128",
+        "wildcard": "0.0.0.31",
         "area": 0
-      }
+      },
+      {
+        "ip": "172.16.8.176",
+        "wildcard": "0.0.0.31",
+        "area": 0
+      },
     ]
   }
 }
